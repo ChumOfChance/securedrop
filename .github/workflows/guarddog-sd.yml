@@ -32,7 +32,7 @@ jobs:
       - name: Install GuardDog
         run: pip install guarddog
 
-      #currently, this runs on all dependencies. Some grep-fu necessary to get a requirement.txt-like file containing changes in more recent diff, similar to below:
+      # currently, this runs on all dependencies. Some grep-fu necessary to get a requirement.txt-like file containing changes in more recent diff, similar to below:
 
       - name: Get diff of changed packages
         run: git diff HEAD^ HEAD requirements/*.txt | grep -Po '(?<=\+)[a-zA-Z-\/@.0-9]+==[.0-9\n\r]+' > requirements-diff.txt # this fails with exit code 1 if there is no grep match
