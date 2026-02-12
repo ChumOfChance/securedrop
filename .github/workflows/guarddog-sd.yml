@@ -1,4 +1,4 @@
-name: GuardDog for Client
+name: GuardDog for SecureDrop
 
 on:
   push:
